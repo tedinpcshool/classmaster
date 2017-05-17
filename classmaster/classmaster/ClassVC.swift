@@ -51,7 +51,8 @@ class ClassVC: UIViewController {
                     let dayAry = nClass["day"].arrayObject
                     let ca = nClass["category"].string
                     let caID = nClass["category_id"].int
-                    let classObj = ClassModel(className: cn!, teacherName: tn!, zoom: zm!, time: tiAry as! [String], day: dayAry as! [String], category: ca!,category_id:caID!)
+                    let ln = nClass["location"].string
+                    let classObj = ClassModel(className: cn!, teacherName: tn!, zoom: zm!, time: tiAry as! [String], day: dayAry as! [String], category: ca!,category_id:caID!,location: ln!)
                     self.classModel.append(classObj)
                     
                 }
@@ -77,7 +78,7 @@ class ClassVC: UIViewController {
         for classobj in self.classModel {
             if classobj.category_id==sender.tag {
                 ary.append(classobj)
-//                print(ary)
+
             }
         }
        
