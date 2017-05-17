@@ -38,6 +38,8 @@ class ClassDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSource 
         
         return cell
     }
+    
+    
     /*
     // MARK: - Navigation
 
