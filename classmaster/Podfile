@@ -7,5 +7,5 @@ target 'classmaster' do
 
   # Pods for classmaster
      pod 'InteractiveSideMenu'
-
+     pod 'SwiftyJSON'
 end
