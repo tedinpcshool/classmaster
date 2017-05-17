@@ -13,6 +13,7 @@
 		E929A6511ECC650700B21E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E929A6501ECC650700B21E9F /* Assets.xcassets */; };
 		E929A6541ECC650700B21E9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E929A6521ECC650700B21E9F /* LaunchScreen.storyboard */; };
 		E929A65E1ECC65CF00B21E9F /* readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E929A65D1ECC65CF00B21E9F /* readme.rtf */; };
+		E929A6611ECC839800B21E9F /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E929A6601ECC839800B21E9F /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E929A6531ECC650700B21E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E929A6551ECC650700B21E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E929A65D1ECC65CF00B21E9F /* readme.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = readme.rtf; sourceTree = "<group>"; };
+		E929A6601ECC839800B21E9F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +72,18 @@
 		E929A65C1ECC65B700B21E9F /* documents */ = {
 			isa = PBXGroup;
 			children = (
+				E929A65F1ECC839800B21E9F /* image */,
 				E929A65D1ECC65CF00B21E9F /* readme.rtf */,
 			);
 			path = documents;
+			sourceTree = "<group>";
+		};
+		E929A65F1ECC839800B21E9F /* image */ = {
+			isa = PBXGroup;
+			children = (
+				E929A6601ECC839800B21E9F /* logo.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E929A6541ECC650700B21E9F /* LaunchScreen.storyboard in Resources */,
+				E929A6611ECC839800B21E9F /* logo.png in Resources */,
 				E929A6511ECC650700B21E9F /* Assets.xcassets in Resources */,
 				E929A65E1ECC65CF00B21E9F /* readme.rtf in Resources */,
 				E929A64F1ECC650700B21E9F /* Main.storyboard in Resources */,
@@ -311,6 +323,7 @@
 				E929A65A1ECC650700B21E9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,52 +24,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="點餐系統" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdh-Ct-jSp">
-                                <rect key="frame" x="231" y="270" width="307" height="103"/>
+                                <rect key="frame" x="231" y="327" width="307" height="103"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="bUK-qN-OdR">
+                                <rect key="frame" x="220" y="28" width="328" height="234"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="234" id="16X-gD-f1h"/>
+                                    <constraint firstAttribute="width" constant="328" id="EfO-3A-Uh1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請輸入房號     R" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fib-Hr-IU1">
+                                <rect key="frame" x="106" y="564" width="289" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="289" id="fLa-0a-Gak"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="例： 101" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sgl-aE-2Ze">
+                                <rect key="frame" x="362" y="574" width="215" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cR5-SE-w5y"/>
+                                    <constraint firstAttribute="width" constant="215" id="e1b-Dk-ib7"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijc-Rs-x9W">
-                                <rect key="frame" x="302" y="727" width="165" height="61"/>
+                                <rect key="frame" x="302" y="830" width="165" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="開始點餐"/>
                                 <connections>
                                     <action selector="btnStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aba-Xm-enD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bUK-qN-OdR">
-                                <rect key="frame" x="284" y="28" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="16X-gD-f1h"/>
-                                    <constraint firstAttribute="width" constant="200" id="EfO-3A-Uh1"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請輸入房號" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fib-Hr-IU1">
-                                <rect key="frame" x="135" y="528" width="194" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zM-a5-7g2">
-                                <rect key="frame" x="389" y="445" width="334" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gdh-Ct-jSp" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="2eW-NY-yt8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fib-Hr-IU1" secondAttribute="bottom" constant="390" id="AS4-rR-1sc"/>
+                            <constraint firstItem="fib-Hr-IU1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="86" id="Eqy-4T-4uO"/>
                             <constraint firstItem="bUK-qN-OdR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="SDQ-Og-06k"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ijc-Rs-x9W" secondAttribute="bottom" constant="236" id="ZBq-hq-8al"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ijc-Rs-x9W" secondAttribute="bottom" constant="133" id="ZBq-hq-8al"/>
+                            <constraint firstAttribute="trailing" secondItem="Sgl-aE-2Ze" secondAttribute="trailing" constant="191" id="bSy-l4-i1P"/>
                             <constraint firstItem="gdh-Ct-jSp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="djI-eb-qZb"/>
-                            <constraint firstItem="gdh-Ct-jSp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="fra-3k-21k"/>
+                            <constraint firstItem="gdh-Ct-jSp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="307" id="fra-3k-21k"/>
+                            <constraint firstItem="Sgl-aE-2Ze" firstAttribute="centerY" secondItem="fib-Hr-IU1" secondAttribute="centerY" id="idV-sh-en0"/>
                             <constraint firstItem="gdh-Ct-jSp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="jCR-cv-sG2"/>
                             <constraint firstItem="bUK-qN-OdR" firstAttribute="centerX" secondItem="Ijc-Rs-x9W" secondAttribute="centerX" id="kJ8-hb-DKd"/>
                             <constraint firstItem="bUK-qN-OdR" firstAttribute="centerX" secondItem="gdh-Ct-jSp" secondAttribute="centerX" id="u6b-np-Z8x"/>
+                            <constraint firstAttribute="bottom" secondItem="Sgl-aE-2Ze" secondAttribute="bottom" constant="400" id="xui-wD-sya"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pkRoom" destination="3zM-a5-7g2" id="oFV-LL-MoL"/>
+                        <outlet property="btnSt" destination="Ijc-Rs-x9W" id="Mkj-wR-smb"/>
+                        <outlet property="txtRoomNum" destination="Sgl-aE-2Ze" id="eaG-1w-hkL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,4 +91,7 @@
             <point key="canvasLocation" x="25" y="40.4296875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo.png" width="290" height="200"/>
+    </resources>
 </document>
