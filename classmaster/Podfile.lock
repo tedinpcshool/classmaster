@@ -1,0 +1,12 @@
+PODS:
+  - InteractiveSideMenu (1.0)
+
+DEPENDENCIES:
+  - InteractiveSideMenu
+
+SPEC CHECKSUMS:
+  InteractiveSideMenu: 2966af15dee760f6c3e09a7a80a98c09fed3d7a4
+
+PODFILE CHECKSUM: 52b3a03bb23d9ca05a8508a6b4662e729b19f0d7
+
+COCOAPODS: 1.2.1
