@@ -38,7 +38,7 @@ class ClassVC: UIViewController {
         do{
             try data1 = Data(contentsOf: URL(fileURLWithPath:
                 filePath!, isDirectory: false))
-             try json_parsed = JSON(data: data1)
+             json_parsed = JSON(data: data1)
 //            print(json_parsed)
             if let myClass = json_parsed.array
             {
@@ -77,7 +77,7 @@ class ClassVC: UIViewController {
         for classobj in self.classModel {
             if classobj.category_id==sender.tag {
                 ary.append(classobj)
-                print(ary)
+//                print(ary)
             }
         }
        

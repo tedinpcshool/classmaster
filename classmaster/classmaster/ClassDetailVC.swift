@@ -38,7 +38,16 @@ class ClassDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSource 
         
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          //indexPath.row
+        
+          let vc2 = storyboard?.instantiateViewController(withIdentifier: "goToDetailVC2") as! ClassDetailVC2
+          vc2.classObj = self.classModel[indexPath.row]
+        self.navigationController?.pushViewController(vc2, animated: true)
+//        self.navigationController?.pushViewController(vc2, animated: true)
+          //self.show(vc2, sender: self)
+          
+    }
     
     /*
     // MARK: - Navigation
