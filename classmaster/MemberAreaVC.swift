@@ -1,37 +1,30 @@
 //
-//  IntroVC.swift
+//  MemberAreaVC.swift
 //  classmaster
 //
-//  Created by ios on 2017/5/15.
+//  Created by ios135 on 2017/5/19.
 //  Copyright © 2017年 pcschool. All rights reserved.
 //
 
 import UIKit
 import InteractiveSideMenu
+class MemberAreaVC: MenuItemContentViewController {
 
-class IntroVC: MenuItemContentViewController {
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var txtview: UITextView!
-    
-    @IBAction func didOpenMenu(_ sender: UIButton) {
+    @IBAction func MbAreaBtn(_ sender: Any) {
         showMenu()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    func setTxtView(tmpStr:String){
-        self.txtview.text=tmpStr
-    }
 
     /*
     // MARK: - Navigation

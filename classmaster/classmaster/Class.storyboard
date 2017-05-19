@@ -12,7 +12,7 @@
         <!--課表查詢-->
         <scene sceneID="oG0-uz-InZ">
             <objects>
-                <viewController id="u0b-sQ-vvM" customClass="ClassVC" customModule="classmaster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="classVC" id="u0b-sQ-vvM" customClass="ClassVC" customModule="classmaster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qIS-09-E8w"/>
                         <viewControllerLayoutGuide type="bottom" id="czB-nX-cUx"/>
@@ -77,8 +77,23 @@
                                     <action selector="categoryClick:" destination="u0b-sQ-vvM" eventType="touchUpInside" id="roB-pD-MXr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHQ-HN-DfC">
+                                <rect key="frame" x="16" y="64" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EZU-7r-0B2"/>
+                                    <constraint firstAttribute="width" constant="44" id="oZE-he-yRM"/>
+                                </constraints>
+                                <state key="normal" image="Menu"/>
+                                <connections>
+                                    <action selector="pushBtnToMenu:" destination="u0b-sQ-vvM" eventType="touchUpInside" id="VIO-Vg-NWw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LHQ-HN-DfC" firstAttribute="top" secondItem="qIS-09-E8w" secondAttribute="bottom" id="V6c-IZ-gKh"/>
+                            <constraint firstItem="LHQ-HN-DfC" firstAttribute="leading" secondItem="UQj-ju-Tab" secondAttribute="leadingMargin" id="f9S-5z-pIE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="課表查詢" id="jvH-Tw-zkb"/>
                     <connections>
@@ -362,7 +377,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Wit-Bg-fzv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QGH-I3-A3B" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Navi" automaticallyAdjustsScrollViewInsets="NO" id="QGH-I3-A3B" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qbi-LP-6ve">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -379,6 +394,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Menu" width="24" height="17"/>
         <image name="p1" width="100" height="100"/>
         <image name="p2" width="100" height="100"/>
         <image name="p3" width="100" height="100"/>

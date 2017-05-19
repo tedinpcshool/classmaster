@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import InteractiveSideMenu
+class PriceVC: MenuItemContentViewController {
 
-class PriceVC: UIViewController {
-
+    @IBAction func priceBtn(_ sender: Any) {
+        showMenu()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

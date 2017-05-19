@@ -21,7 +21,7 @@ import InteractiveSideMenu
 
 class NavigationMenuViewController: MenuViewController {
 
-    let kItemsCount = 2
+    let kItemsCount = 4
     let kCellReuseIdentifier = "UITableViewCell"
     let cats = ["簡介", "收費方式","課表","會員專區"]
 

@@ -45,10 +45,30 @@ class HostViewController: MenuContainerViewController {
     private func contentControllers() -> [MenuItemContentViewController] {
         var contentList = [MenuItemContentViewController]()
         
+
+        
+        let storyboardIntro = UIStoryboard(name: "Intro", bundle: nil)
+        let introVC = storyboardIntro.instantiateViewController(withIdentifier: "IntroVC") as! MenuItemContentViewController
+        
+       
+        
+        let storyboardClass = UIStoryboard(name: "Class", bundle: nil)
+        let classVC = storyboardClass.instantiateViewController(withIdentifier: "classVC") as! MenuItemContentViewController
         
         
-        contentList.append(self.storyboard?.instantiateViewController(withIdentifier: "First") as! MenuItemContentViewController)
-        contentList.append(self.storyboard?.instantiateViewController(withIdentifier: "Second") as! MenuItemContentViewController)
+        let  storyboardPrice = UIStoryboard(name: "Price", bundle: nil)
+        let priceVC = storyboardPrice.instantiateViewController(withIdentifier: "PriceVC") as! MenuItemContentViewController
+        
+        let storyboardMemArea = UIStoryboard(name: "MemArea", bundle: nil)
+        let MemAreaVC = storyboardMemArea.instantiateViewController(withIdentifier: "MAVC") as! MenuItemContentViewController
+        
+        
+        
+        contentList.append(introVC)
+        contentList.append(priceVC)
+        contentList.append(classVC)
+        contentList.append(MemAreaVC)
+//        contentList.append(self.storyboard?.instantiateViewController(withIdentifier: "Second") as! MenuItemContentViewController)
         return contentList
     }
 }
