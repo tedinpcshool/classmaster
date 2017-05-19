@@ -9,6 +9,8 @@
 import UIKit
 import InteractiveSideMenu
 
+
+
 class IntroVC: MenuItemContentViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var txtview: UITextView!
