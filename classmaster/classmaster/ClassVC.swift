@@ -8,7 +8,9 @@
 
 import UIKit
 import SwiftyJSON
-class ClassVC: UIViewController {
+import InteractiveSideMenu
+
+class ClassVC: MenuItemContentViewController {
     
     
     @IBOutlet weak var categoryBtn: UIButton!
@@ -28,6 +30,10 @@ class ClassVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func pushBtnToMenu(_ sender: UIButton) {
+        showMenu()
+        
+    }
     
     func getJsonToArys()
     {

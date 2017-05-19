@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import InteractiveSideMenu
 
-class ClassDetailVC2: UIViewController {
+class ClassDetailVC2: MenuItemContentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

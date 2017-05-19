@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import InteractiveSideMenu
 
-class IntroVC: UIViewController {
+class IntroVC: MenuItemContentViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var txtview: UITextView!
+    
+    @IBAction func didOpenMenu(_ sender: UIButton) {
+        showMenu()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

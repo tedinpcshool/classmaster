@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import InteractiveSideMenu
 
-class ClassDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ClassDetailVC: MenuItemContentViewController,UITableViewDelegate,UITableViewDataSource {
 
     
     var classModel:[ClassModel] = []

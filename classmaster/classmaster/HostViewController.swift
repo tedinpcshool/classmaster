@@ -45,9 +45,12 @@ class HostViewController: MenuContainerViewController {
     private func contentControllers() -> [MenuItemContentViewController] {
         var contentList = [MenuItemContentViewController]()
         
+        let storyboardClass = UIStoryboard(name: "Class", bundle: nil)
+        let classVC = storyboardClass.instantiateViewController(withIdentifier: "classVC") as! MenuItemContentViewController
         
         
-        contentList.append(self.storyboard?.instantiateViewController(withIdentifier: "First") as! MenuItemContentViewController)
+                
+        contentList.append(classVC)
         contentList.append(self.storyboard?.instantiateViewController(withIdentifier: "Second") as! MenuItemContentViewController)
         return contentList
     }
