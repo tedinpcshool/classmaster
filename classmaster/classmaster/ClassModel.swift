@@ -16,8 +16,9 @@ class ClassModel: NSObject {
     var day:[String]
     var category:String?
     var category_id:Int?
+    var location:String?
     
-    init(className:String,teacherName:String,zoom:String,time:[String],day:[String],category:String,category_id:Int) {
+    init(className:String,teacherName:String,zoom:String,time:[String],day:[String],category:String,category_id:Int,location:String) {
         self.className = className
         self.teacherName = teacherName
         self.zoom = zoom
@@ -25,6 +26,8 @@ class ClassModel: NSObject {
         self.day = day
         self.category = category
         self.category_id = category_id
+        self.location = location
+        
     }
     
     

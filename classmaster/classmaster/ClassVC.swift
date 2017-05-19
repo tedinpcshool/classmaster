@@ -44,7 +44,7 @@ class ClassVC: MenuItemContentViewController {
         do{
             try data1 = Data(contentsOf: URL(fileURLWithPath:
                 filePath!, isDirectory: false))
-             try json_parsed = JSON(data: data1)
+             json_parsed = JSON(data: data1)
 //            print(json_parsed)
             if let myClass = json_parsed.array
             {
@@ -57,7 +57,8 @@ class ClassVC: MenuItemContentViewController {
                     let dayAry = nClass["day"].arrayObject
                     let ca = nClass["category"].string
                     let caID = nClass["category_id"].int
-                    let classObj = ClassModel(className: cn!, teacherName: tn!, zoom: zm!, time: tiAry as! [String], day: dayAry as! [String], category: ca!,category_id:caID!)
+                    let ln = nClass["location"].string
+                    let classObj = ClassModel(className: cn!, teacherName: tn!, zoom: zm!, time: tiAry as! [String], day: dayAry as! [String], category: ca!,category_id:caID!,location: ln!)
                     self.classModel.append(classObj)
                     
                 }
@@ -83,7 +84,7 @@ class ClassVC: MenuItemContentViewController {
         for classobj in self.classModel {
             if classobj.category_id==sender.tag {
                 ary.append(classobj)
-                print(ary)
+
             }
         }
        

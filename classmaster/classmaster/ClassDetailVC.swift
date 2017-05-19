@@ -18,9 +18,16 @@ class ClassDetailVC: MenuItemContentViewController,UITableViewDelegate,UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    
     }
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if classModel.count == 0
+        {
+            msg(myTitle: "課程規劃中!", myMessage: "尚未開課")
+        }
 
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -35,20 +42,29 @@ class ClassDetailVC: MenuItemContentViewController,UITableViewDelegate,UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = classModel[indexPath.row].className
-        cell.detailTextLabel?.text = "教練: \(classModel[indexPath.row].teacherName!), 日期: \(classModel[indexPath.row].day[0]), 時間: \(classModel[indexPath.row].time[0])\n教練: \(classModel[indexPath.row].teacherName!), 日期: \(classModel[indexPath.row].day[1]), 時間: \(classModel[indexPath.row].time[1])"
+        cell.detailTextLabel?.text = "教練: \(classModel[indexPath.row].teacherName!), 日期: \(classModel[indexPath.row].day[0]), 時段: \(classModel[indexPath.row].time[0]),地點:\(classModel[indexPath.row].location!)\n教練: \(classModel[indexPath.row].teacherName!), 日期: \(classModel[indexPath.row].day[1]), 時段: \(classModel[indexPath.row].time[1]),地點:\(classModel[indexPath.row].location!)"
         
         return cell
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          //indexPath.row
+        
+          let vc2 = storyboard?.instantiateViewController(withIdentifier: "goToDetailVC2") as! ClassDetailVC2
+          vc2.classObj = self.classModel[indexPath.row]
+//          self.navigationController?.pushViewController(vc2, animated: true)
+//        self.navigationController?.pushViewController(vc2, animated: true)
+          self.show(vc2, sender: self)
+          
     }
-    */
+    
+    func msg(myTitle:String,myMessage:String){
+        let alertController = UIAlertController(title: myTitle, message: myMessage, preferredStyle: UIAlertControllerStyle.alert)
+        let btn1 = UIAlertAction(title: "取消", style: UIAlertActionStyle.default) {(btn1)in
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        alertController.addAction(btn1)
+        present(alertController, animated: false, completion: nil)
+    }
 
 }
