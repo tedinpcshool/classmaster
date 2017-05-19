@@ -33,6 +33,7 @@ class HostViewController: MenuContainerViewController {
         contentViewControllers = contentControllers()
         
         selectContentViewController(contentViewControllers.first!)
+        self.title="AAA"
     }
     
     override func menuTransitionOptionsBuilder() -> TransitionOptionsBuilder? {
@@ -46,11 +47,10 @@ class HostViewController: MenuContainerViewController {
         var contentList = [MenuItemContentViewController]()
         
         let storyboardClass = UIStoryboard(name: "Class", bundle: nil)
-        let classVC = storyboardClass.instantiateViewController(withIdentifier: "classVC") as! MenuItemContentViewController
-        
+        let classVC2 = storyboardClass.instantiateViewController(withIdentifier: "classVC") as! MenuItemContentViewController
         
                 
-        contentList.append(classVC)
+        contentList.append(classVC2)
         contentList.append(self.storyboard?.instantiateViewController(withIdentifier: "Second") as! MenuItemContentViewController)
         return contentList
     }

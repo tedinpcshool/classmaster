@@ -24,4 +24,8 @@ class SecondViewController: MenuItemContentViewController {
     @IBAction func didOpenMenu(_ sender: UIButton) {
         showMenu()
     }
+    
+    override func viewDidLoad() {
+        self.title="AAA"
+    }
 }
