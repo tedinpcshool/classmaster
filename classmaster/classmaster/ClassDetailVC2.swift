@@ -10,6 +10,16 @@ import UIKit
 import InteractiveSideMenu
 
 class ClassDetailVC2: MenuItemContentViewController {
+    
+    @IBOutlet weak var classNameLabel: UILabel!
+    @IBOutlet weak var zoomLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var teacherNameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
 
     var classObj:ClassModel?
     override func viewDidLoad() {
