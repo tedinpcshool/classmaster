@@ -56,10 +56,9 @@ class HostViewController: MenuContainerViewController {
         let storyboardIntro = UIStoryboard(name: "Intro", bundle: nil)
         let introVC = storyboardIntro.instantiateViewController(withIdentifier: "IntroVC") as! MenuItemContentViewController
         
-       
         
         let storyboardClass = UIStoryboard(name: "Class", bundle: nil)
-        let classVC2 = storyboardClass.instantiateViewController(withIdentifier: "classVC") as! MenuItemContentViewController
+        let classVC = storyboardClass.instantiateViewController(withIdentifier: "classVC") as! MenuItemContentViewController
         
         let  storyboardPrice = UIStoryboard(name: "Price", bundle: nil)
         let priceVC = storyboardPrice.instantiateViewController(withIdentifier: "PriceVC") as! MenuItemContentViewController
