@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8z-pV-DBI">
-                                <rect key="frame" x="46" y="50" width="50" height="50"/>
+                                <rect key="frame" x="17" y="21" width="50" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Vbq-eM-gsJ"/>
@@ -39,8 +39,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="f8z-pV-DBI" firstAttribute="top" secondItem="JIk-W1-0A9" secondAttribute="bottom" constant="30" id="6et-ce-2pE"/>
-                            <constraint firstItem="f8z-pV-DBI" firstAttribute="leading" secondItem="xjb-wf-6sv" secondAttribute="leadingMargin" constant="30" id="nK7-1u-6dy"/>
+                            <constraint firstItem="f8z-pV-DBI" firstAttribute="top" secondItem="JIk-W1-0A9" secondAttribute="bottom" constant="1" id="6et-ce-2pE"/>
+                            <constraint firstItem="f8z-pV-DBI" firstAttribute="leading" secondItem="xjb-wf-6sv" secondAttribute="leadingMargin" constant="1" id="nK7-1u-6dy"/>
                         </constraints>
                     </view>
                 </viewController>
