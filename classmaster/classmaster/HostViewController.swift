@@ -40,6 +40,11 @@ class HostViewController: MenuContainerViewController {
         return TransitionOptionsBuilder() { builder in
             builder.duration = 0.5
             builder.contentScale = 1
+            
+            
+            print("test")
+            
+            
         }
     }
     
