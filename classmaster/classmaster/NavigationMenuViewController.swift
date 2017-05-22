@@ -50,6 +50,7 @@ extension NavigationMenuViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: kCellReuseIdentifier, for: indexPath)
         cell.textLabel?.text = cats[indexPath.row]
 
+        cell.backgroundColor=UIColor.blue
         return cell
     }
 
