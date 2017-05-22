@@ -33,18 +33,19 @@ class HostViewController: MenuContainerViewController {
         contentViewControllers = contentControllers()
         
         selectContentViewController(contentViewControllers.first!)
-        self.title="AAA"
+        
     }
+   
+    @IBAction func pushBtnToMenu(_ sender: UIBarButtonItem) {
+        showMenu()
+    }
+    
     
     override func menuTransitionOptionsBuilder() -> TransitionOptionsBuilder? {
         return TransitionOptionsBuilder() { builder in
             builder.duration = 0.5
             builder.contentScale = 1
-            
-            
-            print("test")
-            
-            
+                     
         }
     }
     

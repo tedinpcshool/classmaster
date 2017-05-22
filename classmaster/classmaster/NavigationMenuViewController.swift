@@ -23,7 +23,7 @@ class NavigationMenuViewController: MenuViewController {
 
     let kItemsCount = 4
     let kCellReuseIdentifier = "UITableViewCell"
-    let cats = ["簡介", "收費方式","課表","會員專區"]
+    let cats = ["簡介", "收費方式","課程查詢","會員專區"]
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -50,7 +50,7 @@ extension NavigationMenuViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: kCellReuseIdentifier, for: indexPath)
         cell.textLabel?.text = cats[indexPath.row]
 
-        cell.backgroundColor=UIColor.blue
+//        cell.backgroundColor=UIColor.blue
         return cell
     }
 

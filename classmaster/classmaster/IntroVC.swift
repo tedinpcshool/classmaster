@@ -15,16 +15,17 @@ class IntroVC: MenuItemContentViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var txtview: UITextView!
     
-    @IBAction func didOpenMenu(_ sender: UIButton) {
-        showMenu()
-    }
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
-    
+  
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "簡介"
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
