@@ -23,7 +23,7 @@ class NavigationMenuViewController: MenuViewController {
 
     let kItemsCount = 4
     let kCellReuseIdentifier = "UITableViewCell"
-    let cats = ["簡介", "收費方式","課表","會員專區"]
+    let cats = ["簡介", "收費方式","課程查詢","會員專區"]
 
     @IBOutlet weak var tableView: UITableView!
     

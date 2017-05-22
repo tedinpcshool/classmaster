@@ -10,14 +10,15 @@ import UIKit
 import InteractiveSideMenu
 class MemberAreaVC: MenuItemContentViewController {
 
-    @IBAction func MbAreaBtn(_ sender: Any) {
-        showMenu()
-    }
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "會員專區"
     }
 
     override func didReceiveMemoryWarning() {
