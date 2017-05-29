@@ -44,6 +44,8 @@ class ClassDetailVC2: MenuItemContentViewController {
                 
     }
     
+    @IBAction func signUpBtn(_ sender: UIButton) {
+    }
   
     
     
