@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import InteractiveSideMenu
 
-class ClassDetailVC2: MenuItemContentViewController {
+class ClassDetailVC2: UIViewController {
     
     @IBOutlet weak var classNameLabel: UILabel!
     @IBOutlet weak var zoomLabel: UILabel!
@@ -22,6 +21,9 @@ class ClassDetailVC2: MenuItemContentViewController {
     
 
     var classObj:ClassModel?
+    let userDefault = UserDefaults.standard
+    var users = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +34,6 @@ class ClassDetailVC2: MenuItemContentViewController {
         // Dispose of any resources that can be recreated.
     }
       override func viewDidAppear(_ animated: Bool) {
-       
        
           classNameLabel.text = classObj?.className!
           zoomLabel.text = classObj?.zoom!
@@ -45,8 +46,40 @@ class ClassDetailVC2: MenuItemContentViewController {
     }
     
     @IBAction func signUpBtn(_ sender: UIButton) {
+              
+        if userDefault.object(forKey: "userInfo") != nil{
+
+            let weinClass = UIStoryboard(name: "MemArea", bundle: nil)
+            let nWeinVC = weinClass.instantiateViewController(withIdentifier: "goToWeinVC2") as! WeinVC2
+            self.show(nWeinVC, sender: self)
+            
+            nWeinVC.classObj = self.classObj
+//            userDefault.set(self.classObj?.className, forKey: "classname")
+//            userDefault.synchronize()
+
+        }else
+        {
+            msg(myTitle: "未加入會員", myMessage: "請先登入會員")
+            
+
+        }
+        
     }
-  
+    
+    func msg(myTitle:String,myMessage:String){
+        let alertController = UIAlertController(title: myTitle, message: myMessage, preferredStyle: UIAlertControllerStyle.alert)
+        let btn1 = UIAlertAction(title: "確定", style: UIAlertActionStyle.default) {(btn1)in
+            let memberClass = UIStoryboard(name: "MemArea", bundle: nil)
+            let nMemberVC = memberClass.instantiateViewController(withIdentifier: "MemberVC") as! MemberAreaVC
+            self.show(nMemberVC, sender: self)
+            nMemberVC.navigationController?.isNavigationBarHidden = true
+
+        }
+        
+        alertController.addAction(btn1)
+        present(alertController, animated: false, completion: nil)
+    }
+
     
     
 }

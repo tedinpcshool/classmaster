@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="owS-9K-RRt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WbZ-Qw-ZfD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2708" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2628" y="147"/>
         </scene>
         <!--Host View Controller-->
         <scene sceneID="QiK-2x-7Tv">
@@ -148,10 +148,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Qdx-aG-ZIP">
-                        <barButtonItem key="leftBarButtonItem" image="Menu" id="VKf-Sm-FnD">
+                    <navigationItem key="navigationItem" id="Ggs-pf-iHR">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="4Dh-Xc-97e">
                             <connections>
-                                <action selector="pushBtnToMenu:" destination="0Vz-9K-i9E" id="Ohw-sQ-uub"/>
+                                <action selector="pushBtnToMenu:" destination="0Vz-9K-i9E" id="xfF-U4-09l"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -159,23 +159,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQt-mi-UYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920.8" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1793" y="139"/>
+        </scene>
+        <!--WeinVC1-->
+        <scene sceneID="eil-Gu-ODj">
+            <objects>
+                <viewController id="jqZ-cM-Jwn" customClass="WeinVC1" customModule="classmaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VfU-dr-odR"/>
+                        <viewControllerLayoutGuide type="bottom" id="lOQ-Pv-F4w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8iX-5J-uCu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDH-4T-meS">
+                                <rect key="frame" x="121" y="157" width="133" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="login"/>
+                                <connections>
+                                    <action selector="pushBtn:" destination="jqZ-cM-Jwn" eventType="touchUpInside" id="pL4-S4-cRK"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibQ-so-EcS" customClass="GIDSignInButton">
+                                <rect key="frame" x="67" y="443" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEz-Bx-Pqo">
+                                <rect key="frame" x="121" y="307" width="133" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="logout"/>
+                                <connections>
+                                    <action selector="pushBtn:" destination="jqZ-cM-Jwn" eventType="touchUpInside" id="p6n-JU-Uze"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="ibQ-so-EcS" id="yJ3-FU-RV3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dru-IC-oVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="902.69865067466276"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="APS-D5-fEe">
+        <scene sceneID="FoO-BB-CbD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="owS-9K-RRt" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WbZ-Qw-ZfD" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7QX-Mr-rFU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Cwj-KF-HCk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0Vz-9K-i9E" kind="relationship" relationship="rootViewController" id="GRh-Qd-2hF"/>
+                        <segue destination="0Vz-9K-i9E" kind="relationship" relationship="rootViewController" id="mUL-Dv-SRX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K7R-MO-Kn0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFY-mc-PGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981.60000000000002" y="138.98050974512745"/>
         </scene>

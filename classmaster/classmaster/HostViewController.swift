@@ -33,47 +33,44 @@ class HostViewController: MenuContainerViewController {
         contentViewControllers = contentControllers()
         
         selectContentViewController(contentViewControllers.first!)
-        
     }
-   
-    @IBAction func pushBtnToMenu(_ sender: UIBarButtonItem) {
-        showMenu()
-    }
-    
     
     override func menuTransitionOptionsBuilder() -> TransitionOptionsBuilder? {
         return TransitionOptionsBuilder() { builder in
             builder.duration = 0.5
             builder.contentScale = 1
-                     
         }
     }
     
+    @IBAction func pushBtnToMenu(_ sender: UIBarButtonItem) {
+        showMenu()
+    }
+    
     private func contentControllers() -> [MenuItemContentViewController] {
-        var contentList = [MenuItemContentViewController]()
         
+        var contentList = [MenuItemContentViewController]()
+        let introClass = UIStoryboard(name: "Intro", bundle: nil)
+        let nIntroVC = introClass.instantiateViewController(withIdentifier: "goToIntroVC") as! MenuItemContentViewController
+            contentList.append(nIntroVC)
+        
+        let priceClass = UIStoryboard(name: "Price", bundle: nil)
+        let nPriceVC = priceClass.instantiateViewController(withIdentifier: "goToPriceVC") as! MenuItemContentViewController
+            contentList.append(nPriceVC)
+
+        let storybordClass = UIStoryboard(name: "Class", bundle: nil)
+        let nClassVC = storybordClass.instantiateViewController(withIdentifier: "classVC") as! MenuItemContentViewController
+            contentList.append(nClassVC)
+        
+        let memberClass = UIStoryboard(name: "MemArea", bundle: nil)
+//        let nMemberVC = memberClass.instantiateViewController(withIdentifier: "MemberVC") as! MenuItemContentViewController
+        let nWeinVC = memberClass.instantiateViewController(withIdentifier: "goToWeinVC2") as! MenuItemContentViewController
+       
+            contentList.append(nWeinVC)
 
         
-        let storyboardIntro = UIStoryboard(name: "Intro", bundle: nil)
-        let introVC = storyboardIntro.instantiateViewController(withIdentifier: "IntroVC") as! MenuItemContentViewController
-        
-        
-        let storyboardClass = UIStoryboard(name: "Class", bundle: nil)
-        let classVC = storyboardClass.instantiateViewController(withIdentifier: "classVC") as! MenuItemContentViewController
-        
-        let  storyboardPrice = UIStoryboard(name: "Price", bundle: nil)
-        let priceVC = storyboardPrice.instantiateViewController(withIdentifier: "PriceVC") as! MenuItemContentViewController
-        
-        let storyboardMemArea = UIStoryboard(name: "MemArea", bundle: nil)
-        let MemAreaVC = storyboardMemArea.instantiateViewController(withIdentifier: "MAVC") as! MenuItemContentViewController
-        
-        
-        
-        contentList.append(introVC)
-        contentList.append(priceVC)
-        contentList.append(classVC)
-        contentList.append(MemAreaVC)
-//        contentList.append(self.storyboard?.instantiateViewController(withIdentifier: "Second") as! MenuItemContentViewController)
+//        contentList.append(self.storyboard?.instantiateViewController(withIdentifier: "First") as! MenuItemContentViewController)
+//        contentList.append(self.storyboard?.instantiateViewController(withIdentifier: "goIntroVC") as! MenuItemContentViewController)
+       
         return contentList
     }
 }

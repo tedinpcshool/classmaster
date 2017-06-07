@@ -9,17 +9,11 @@
 import UIKit
 import InteractiveSideMenu
 class PriceVC: MenuItemContentViewController {
-    
-    
 
-     override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = "收費方式"
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +21,9 @@ class PriceVC: MenuItemContentViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+       self.navigationController?.navigationBar.topItem?.title = "收費方式"
+    }
     /*
     // MARK: - Navigation
 
