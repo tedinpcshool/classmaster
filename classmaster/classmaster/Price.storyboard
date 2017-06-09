@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,22 +9,45 @@
     </dependencies>
     <scenes>
         <!--PriceVC-->
-        <scene sceneID="IES-Np-Ahy">
+        <scene sceneID="E8Q-CY-YNQ">
             <objects>
-                <viewController storyboardIdentifier="PriceVC" id="MYJ-qN-Fhb" customClass="PriceVC" customModule="classmaster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goToPriceVC" id="hET-Oc-7gU" customClass="PriceVC" customModule="classmaster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JIk-W1-0A9"/>
-                        <viewControllerLayoutGuide type="bottom" id="j0Y-x0-DWa"/>
+                        <viewControllerLayoutGuide type="top" id="STK-jz-NqY"/>
+                        <viewControllerLayoutGuide type="bottom" id="AXw-ar-5RV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xjb-wf-6sv">
+                    <view key="view" contentMode="scaleToFill" id="GE9-e8-OI1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WfW-AY-vdo">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">各營隊上課費率（如：東光,文元...等, 每週ㄧ堂課）
+月份費上課卡4堂800元
+（逾期不補，請自行至其他營隊補課）
+ㄧ次購買三個月2250元（限月初第一堂課購買）
+（足球場班費率）
+國小組10堂2500。每堂90分
+幼兒組10堂2200。每堂60分
+（逾期不補，請自行至其他營隊補課）
+少年隊須知：
+續配合球隊練球時間（為了整體的訓練,平日兩天一定要到場練球）
+需具備球隊練球必須裝備（球鞋,東門城球衣褲,球襪,護徑）
+若有練習賽或友誼賽需配合比賽時間
+需允許教練與球員溝通球員的禮儀（包括生活習慣以及練球時的態度）
+所有球員需有共同目標 用心在練球上！（陸續新增中）</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCe-jm-SL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VhR-3j-PQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="-207.34632683658174"/>
+            <point key="canvasLocation" x="-199.19999999999999" y="-65.217391304347828"/>
         </scene>
     </scenes>
 </document>

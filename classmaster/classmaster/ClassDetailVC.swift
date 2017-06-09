@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import InteractiveSideMenu
 
-class ClassDetailVC: MenuItemContentViewController,UITableViewDelegate,UITableViewDataSource {
+class ClassDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     
     var classModel:[ClassModel] = []
@@ -51,9 +50,10 @@ class ClassDetailVC: MenuItemContentViewController,UITableViewDelegate,UITableVi
         
           let vc2 = storyboard?.instantiateViewController(withIdentifier: "goToDetailVC2") as! ClassDetailVC2
           vc2.classObj = self.classModel[indexPath.row]
+          self.show(vc2, sender: self)
 //          self.navigationController?.pushViewController(vc2, animated: true)
 //        self.navigationController?.pushViewController(vc2, animated: true)
-          self.show(vc2, sender: self)
+        
           
     }
     
@@ -61,6 +61,7 @@ class ClassDetailVC: MenuItemContentViewController,UITableViewDelegate,UITableVi
         let alertController = UIAlertController(title: myTitle, message: myMessage, preferredStyle: UIAlertControllerStyle.alert)
         let btn1 = UIAlertAction(title: "取消", style: UIAlertActionStyle.default) {(btn1)in
             self.navigationController?.popViewController(animated: true)
+           
         }
         
         alertController.addAction(btn1)

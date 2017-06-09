@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import InteractiveSideMenu
+import Firebase
 
 class ClassVC: MenuItemContentViewController {
     
@@ -25,16 +26,15 @@ class ClassVC: MenuItemContentViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = "課程查詢"
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "課程查詢"
+    }
     
-     
     func getJsonToArys()
     {
         let filePath=Bundle.main.path(forResource: "class", ofType:
@@ -71,9 +71,7 @@ class ClassVC: MenuItemContentViewController {
             print("error:"+error.localizedDescription)
         }
 
-        
-        
-        
+ 
         
     }
    
@@ -94,11 +92,6 @@ class ClassVC: MenuItemContentViewController {
         
     }
  
-    
-    
-    
-        
-    
-    
+   
 
 }

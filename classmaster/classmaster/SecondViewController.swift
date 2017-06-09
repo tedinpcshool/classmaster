@@ -25,7 +25,4 @@ class SecondViewController: MenuItemContentViewController {
         showMenu()
     }
     
-    override func viewDidLoad() {
-        self.title="AAA"
-    }
 }

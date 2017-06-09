@@ -50,12 +50,12 @@ extension NavigationMenuViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: kCellReuseIdentifier, for: indexPath)
         cell.textLabel?.text = cats[indexPath.row]
 
-        cell.backgroundColor=UIColor.clear
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         DispatchQueue.main.async {
+
             guard let menuContainerViewController = self.menuContainerViewController else { return }
             menuContainerViewController.selectContentViewController(menuContainerViewController.contentViewControllers[indexPath.row])
             menuContainerViewController.hideMenu()
