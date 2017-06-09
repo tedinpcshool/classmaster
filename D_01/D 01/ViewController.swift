@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    var datas=["abc"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,11 +26,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return datas.count
     }
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
 //        UITableViewCell {
@@ -52,16 +57,21 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let button : UIButton = UIButton(type:UIButtonType.custom) as UIButton
+        let label1:UILabel = cell.contentView.subviews[0] as! UILabel
         
-        button.frame = CGRect(origin: CGPoint(x: 40,y :60), size: CGSize(width: 100, height: 24))
-        let cellHeight: CGFloat = 44.0
-        button.center = CGPoint(x: view.bounds.width / 2.0, y: cellHeight / 2.0)
-        button.backgroundColor = UIColor.blue
-        button.addTarget(self, action: #selector(buttonClicked), for: UIControlEvents.touchUpInside)
-        button.setTitle(" 加專案!", for: UIControlState.normal)
+        label1.text=self.datas[indexPath.row]
         
-        cell.addSubview(button)
+//        
+//        let button : UIButton = UIButton(type:UIButtonType.custom) as UIButton
+//        
+//        button.frame = CGRect(origin: CGPoint(x: 40,y :60), size: CGSize(width: 100, height: 24))
+//        let cellHeight: CGFloat = 44.0
+//        button.center = CGPoint(x: view.bounds.width / 2.0, y: cellHeight / 2.0)
+//        button.backgroundColor = UIColor.blue
+//        button.addTarget(self, action: #selector(buttonClicked), for: UIControlEvents.touchUpInside)
+//        button.setTitle(" 加專案!", for: UIControlState.normal)
+//        
+//        cell.addSubview(button)
         return cell
     }
     
@@ -76,6 +86,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
     }
     
+    @IBAction func pushCellBtn(_ sender: UIButton) {
+        print("Cell button Clicked!")
+        self.datas.append("aa")
+        self.tableView.reloadData()
+    }
     
     func buttonClicked(sender : UIButton!) {
         print("Clicked!")
