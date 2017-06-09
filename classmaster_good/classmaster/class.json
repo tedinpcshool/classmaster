@@ -1,0 +1,84 @@
+[
+  {
+    "className": "東區籃球A班",
+    "teacherName": "小叮噹",
+    "price": [100,1000,3000,12000],
+    "zoom": "東區",
+    "location": "活動中心籃球場",
+    "time": ["12:00~13:00","12:00~13:00"],
+    "day": ["星期一","星期二"],
+    "max_student": 10,
+    "min_student":6,
+    "category":"籃球",
+    "category_id":1
+  },
+  {
+    "className": "中西區足球A班",
+    "teacherName": "大雄",
+    "price": [200,1600,6000,18000],
+    "zoom": "中西區",
+    "location": "國小操場",
+    "time": ["12:00~13:00","12:00~13:00"],
+    "day": ["星期五","星期六"],
+    "max_student": 10,
+    "min_student":6,
+    "category":"足球",
+    "category_id":2
+  },
+ {
+   "className": "北區羽球A班",
+   "teacherName": "胖虎",
+   "price": [200,1600,6000,18000],
+   "zoom": "北區",
+   "location": "華中羽球館",
+   "time": ["16:00~17:00","16:00~17:00"],
+   "day": ["星期五","星期六"],
+   "max_student": 10,
+   "min_student":6,
+   "category":"羽球",
+   "category_id":3
+ },
+
+  {
+    "className": "中西區乒乓球A班",
+    "teacherName": "阿福",
+    "price": [100,1000,3000,12000],
+    "zoom": "中西區",
+    "location": "活動中心",
+    "time": ["15:00~16:00","15:00~16:00"],
+    "day": ["星期三","星期四"],
+    "max_student": 10,
+    "min_student":6,
+    "category":"乒乓球",
+    "category_id":7
+  },
+  {
+    "className": "南區排球A班",
+    "teacherName": "怡靜",
+    "price": [200,1600,6000,18000],
+    "zoom": "南區",
+    "location": "國小排球場",
+    "time": ["16:00~17:00","16:00~17:00"],
+    "day": ["星期五","星期六"],
+    "max_student": 10,
+    "min_student":6,
+    "category":"排球",
+    "category_id":4
+  },
+
+  {
+    "className": "東區籃球B班",
+    "teacherName": "小叮噹",
+    "price": [100,1000,3000,12000],
+    "zoom": "東區",
+    "location": "活動中心籃球場",
+    "time": ["12:00~13:00","12:00~13:00"],
+    "day": ["星期六","星期日"],
+    "max_student": 10,
+    "min_student":6,
+    "category":"籃球",
+    "category_id":1
+  }
+
+
+]

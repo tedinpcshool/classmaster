@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1262587C1EE1899300BD362B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1262587B1EE1899300BD362B /* UserInfo.swift */; };
-		126258801EE4256500BD362B /* default_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1262587E1EE4256500BD362B /* default_down.png */; };
-		126258811EE4256500BD362B /* ZHDropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1262587F1EE4256500BD362B /* ZHDropDownMenu.swift */; };
 		126258831EE4481700BD362B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 126258821EE4481700BD362B /* GoogleService-Info.plist */; };
+		126258861EEAAB7900BD362B /* default_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 126258841EEAAB7900BD362B /* default_down.png */; };
+		126258871EEAAB7900BD362B /* ZHDropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126258851EEAAB7900BD362B /* ZHDropDownMenu.swift */; };
+		126258891EEAABDD00BD362B /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126258881EEAABDD00BD362B /* GoogleToolboxForMac.framework */; };
+		1262588B1EEAABE500BD362B /* GTMOAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1262588A1EEAABE500BD362B /* GTMOAuth2.framework */; };
+		1262588D1EEAABEA00BD362B /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1262588C1EEAABEA00BD362B /* GTMSessionFetcher.framework */; };
+		1262588E1EEAAC8700BD362B /* GoogleToolboxForMac.framework in Resources */ = {isa = PBXBuildFile; fileRef = 126258881EEAABDD00BD362B /* GoogleToolboxForMac.framework */; };
+		1262588F1EEAAC9100BD362B /* GTMSessionFetcher.framework in Resources */ = {isa = PBXBuildFile; fileRef = 1262588C1EEAABEA00BD362B /* GTMSessionFetcher.framework */; };
+		126258901EEAAC9D00BD362B /* GTMOAuth2.framework in Resources */ = {isa = PBXBuildFile; fileRef = 1262588A1EEAABE500BD362B /* GTMOAuth2.framework */; };
+		126258911EEAACB300BD362B /* Pods_classmaster.framework in Resources */ = {isa = PBXBuildFile; fileRef = 1FF7A9C2D7D5FAA1BB557963 /* Pods_classmaster.framework */; };
 		1275CFD01ED424B200F25458 /* MemArea.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1275CFCE1ED424B200F25458 /* MemArea.storyboard */; };
 		1275CFD11ED424B200F25458 /* MemberAreaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1275CFCF1ED424B200F25458 /* MemberAreaVC.swift */; };
 		1275CFD41ED46B0C00F25458 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1275CFD31ED46B0C00F25458 /* RegisterVC.swift */; };
@@ -43,9 +50,12 @@
 
 /* Begin PBXFileReference section */
 		1262587B1EE1899300BD362B /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		1262587E1EE4256500BD362B /* default_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_down.png; sourceTree = "<group>"; };
-		1262587F1EE4256500BD362B /* ZHDropDownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHDropDownMenu.swift; sourceTree = "<group>"; };
 		126258821EE4481700BD362B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		126258841EEAAB7900BD362B /* default_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_down.png; path = ZHDropDownMenu/default_down.png; sourceTree = SOURCE_ROOT; };
+		126258851EEAAB7900BD362B /* ZHDropDownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHDropDownMenu.swift; path = ZHDropDownMenu/ZHDropDownMenu.swift; sourceTree = SOURCE_ROOT; };
+		126258881EEAABDD00BD362B /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "Pods/../build/Debug-iphoneos/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
+		1262588A1EEAABE500BD362B /* GTMOAuth2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMOAuth2.framework; path = "Pods/../build/Debug-iphoneos/GTMOAuth2.framework"; sourceTree = "<group>"; };
+		1262588C1EEAABEA00BD362B /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = "Pods/../build/Debug-iphoneos/GTMSessionFetcher.framework"; sourceTree = "<group>"; };
 		1275CFCE1ED424B200F25458 /* MemArea.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MemArea.storyboard; sourceTree = "<group>"; };
 		1275CFCF1ED424B200F25458 /* MemberAreaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberAreaVC.swift; sourceTree = "<group>"; };
 		1275CFD31ED46B0C00F25458 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
@@ -85,6 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1262588D1EEAABEA00BD362B /* GTMSessionFetcher.framework in Frameworks */,
+				1262588B1EEAABE500BD362B /* GTMOAuth2.framework in Frameworks */,
+				126258891EEAABDD00BD362B /* GoogleToolboxForMac.framework in Frameworks */,
 				7C925DA44506D96AE66B7731 /* Pods_classmaster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,8 +108,8 @@
 		1262587D1EE4256500BD362B /* ZHDropDownMenu */ = {
 			isa = PBXGroup;
 			children = (
-				1262587E1EE4256500BD362B /* default_down.png */,
-				1262587F1EE4256500BD362B /* ZHDropDownMenu.swift */,
+				126258841EEAAB7900BD362B /* default_down.png */,
+				126258851EEAAB7900BD362B /* ZHDropDownMenu.swift */,
 			);
 			path = ZHDropDownMenu;
 			sourceTree = "<group>";
@@ -209,6 +222,9 @@
 		A1F3BB89C752192C113F96F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1262588C1EEAABEA00BD362B /* GTMSessionFetcher.framework */,
+				1262588A1EEAABE500BD362B /* GTMOAuth2.framework */,
+				126258881EEAABDD00BD362B /* GoogleToolboxForMac.framework */,
 				1FF7A9C2D7D5FAA1BB557963 /* Pods_classmaster.framework */,
 			);
 			name = Frameworks;
@@ -277,6 +293,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				126258911EEAACB300BD362B /* Pods_classmaster.framework in Resources */,
+				126258901EEAAC9D00BD362B /* GTMOAuth2.framework in Resources */,
+				1262588F1EEAAC9100BD362B /* GTMSessionFetcher.framework in Resources */,
+				1262588E1EEAAC8700BD362B /* GoogleToolboxForMac.framework in Resources */,
 				81B02C371EC9C99900C0723F /* LaunchScreen.storyboard in Resources */,
 				81B02C3F1EC9C9B000C0723F /* Class.storyboard in Resources */,
 				81B02C341EC9C99900C0723F /* Assets.xcassets in Resources */,
@@ -286,9 +306,9 @@
 				1275CFD01ED424B200F25458 /* MemArea.storyboard in Resources */,
 				81B02C511EC9CB0700C0723F /* class.json in Resources */,
 				81B02C531EC9D90700C0723F /* setting.json in Resources */,
+				126258861EEAAB7900BD362B /* default_down.png in Resources */,
 				81B02C4A1EC9CA1B00C0723F /* Intro.storyboard in Resources */,
 				E95B51661EC9D601003B7A04 /* c7.jpg in Resources */,
-				126258801EE4256500BD362B /* default_down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +377,7 @@
 				81B02C451EC9C9E300C0723F /* IntroVC.swift in Sources */,
 				1275CFDC1EDC3C9200F25458 /* WeinVC2.swift in Sources */,
 				81B02C481EC9C9FE00C0723F /* PriceVC.swift in Sources */,
-				126258811EE4256500BD362B /* ZHDropDownMenu.swift in Sources */,
+				126258871EEAAB7900BD362B /* ZHDropDownMenu.swift in Sources */,
 				81B02C421EC9C9CC00C0723F /* ClassVC.swift in Sources */,
 				81B02C2D1EC9C99900C0723F /* AppDelegate.swift in Sources */,
 				E95B51641EC9D4A6003B7A04 /* SecondViewController.swift in Sources */,
@@ -488,6 +508,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U4SA9SA27U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = classmaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -504,6 +528,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U4SA9SA27U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = classmaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
