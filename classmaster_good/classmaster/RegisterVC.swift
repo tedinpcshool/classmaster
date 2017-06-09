@@ -52,11 +52,11 @@ class RegisterVC: UIViewController,UITextFieldDelegate,ZHDropDownMenuDelegate {
     }
     
     @IBAction func registerBtn(_ sender: UIButton) {
-//        if newEmailTextField.text == "" && phoneTextField.text == ""
-//        {
-//              msg(myTitle: "抱歉", myMessage: "請留完整資料")
-//              return
-//        }
+        if newEmailTextField.text == "" && phoneTextField.text == ""
+        {
+              msg(myTitle: "抱歉", myMessage: "請留完整資料")
+              return
+        }
         
         
         Auth.auth().createUser(withEmail: newEmailTextField.text!, password: newPassWordTextField.text!) { (user, error) in
