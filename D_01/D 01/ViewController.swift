@@ -45,6 +45,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, titleForFooterInSection section:
         Int) -> String?{
         return "尾";
+        
     }
     
     
