@@ -13,7 +13,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     @IBOutlet weak var tableView: UITableView!
     
     
-    var datas=["abc"]
+    var datas=["專案1"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,21 +86,20 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
     }
     
-    @IBAction func pushCellBtn(_ sender: UIButton) {
-        print("Cell button Clicked!")
-        self.datas.append("aa")
-        self.tableView.reloadData()
-    }
     
     func buttonClicked(sender : UIButton!) {
         print("Clicked!")
     }
 
     
-    @IBOutlet weak var button1: UIButton!
+    @IBAction func buttonin(_ sender: UIButton) {print("Cell button Clicked!")
+        self.datas.append("專案"+String(datas.count+1))
+        self.tableView.reloadData()
+        
+    }
+   
     
-    @IBAction func button1(_ sender: Any) {
-                                            }
+    
     
 
 }

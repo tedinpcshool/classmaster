@@ -8,9 +8,10 @@
 
 import UIKit
 
-class SGVC1: UIViewController {
-
+class SGVC1: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    var datas = ["成員1"]
     
+    @IBOutlet weak var tableView: UITableView!
     
     @IBAction func pushBtn(_ sender: UIButton) {
         
@@ -21,21 +22,47 @@ class SGVC1: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    // 顯示表格標題
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section:
+        Int) -> String?{
+        return "頭";
+    }
+    // 顯示表格結尾
+    func tableView(_ tableView: UITableView, titleForFooterInSection section:
+        Int) -> String?{
+        return "尾";
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    */
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return datas.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        let label1:UILabel = cell.contentView.subviews[0] as! UILabel
+        
+        label1.text=self.datas[indexPath.row]
+        return cell
+        }
+    
+    
+    @IBAction func addmemBtn(_ sender: UIButton) {
+        self.datas.append("成員"+String(datas.count+1))
+        self.tableView.reloadData()
+
+    }
+    
+    
 }
