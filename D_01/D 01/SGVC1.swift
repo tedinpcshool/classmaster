@@ -8,16 +8,17 @@
 
 import UIKit
 
-class SGVC1: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    var datas = ["成員1"]
+class SGVC1: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate {
+    var nameData:Array<String>=[]
     
+    @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func pushBtn(_ sender: UIButton) {
         
         self.navigationController?.popViewController(animated: true)
     }
-    override func viewDidLoad() {
+    override func viewDidLoad() {self.nameText.delegate=self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -44,7 +45,7 @@ class SGVC1: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datas.count
+        return nameData.count
     }
     
     
@@ -53,16 +54,21 @@ class SGVC1: UIViewController,UITableViewDataSource,UITableViewDelegate {
         
         let label1:UILabel = cell.contentView.subviews[0] as! UILabel
         
-        label1.text=self.datas[indexPath.row]
+        label1.text=self.nameData[indexPath.row]
         return cell
         }
     
     
     @IBAction func addmemBtn(_ sender: UIButton) {
-        self.datas.append("成員"+String(datas.count+1))
+        self.nameData.append(nameText.text!)
         self.tableView.reloadData()
 
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameText.resignFirstResponder()
+        return true
+    }
     
+
     
 }
