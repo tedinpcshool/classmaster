@@ -10,28 +10,42 @@ import UIKit
 
 class SGVC1: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate {
     var nameData:Array<String>=[]
-    
+    var datas:String = ("")
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func pushBtn(_ sender: UIButton) {
         
+        // nameData write to file
+        
+        
         self.navigationController?.popViewController(animated: true)
     }
-    override func viewDidLoad() {self.nameText.delegate=self
+    override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        self.nameText.delegate=self
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     // 顯示表格標題
     func tableView(_ tableView: UITableView, titleForHeaderInSection section:
         Int) -> String?{
-        return "頭";
+        return "成員";
     }
     // 顯示表格結尾
     func tableView(_ tableView: UITableView, titleForFooterInSection section:
         Int) -> String?{
         return "尾";
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // read file to nameData
+        
+        // tableview reload data
         
     }
 
@@ -62,7 +76,7 @@ class SGVC1: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFi
     @IBAction func addmemBtn(_ sender: UIButton) {
         self.nameData.append(nameText.text!)
         self.tableView.reloadData()
-
+        nameText.text!=self.datas
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameText.resignFirstResponder()

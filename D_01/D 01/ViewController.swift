@@ -18,11 +18,15 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         self.nameData.append(nameText.text!)
         self.tableView.reloadData()
-        
+
+            nameText.text!=self.datas
+       
 //        self.nameData.append(String(describing: nameText.text))
         
     }
-    var datas=["專案1"]
+    
+    
+    var datas:String = ("")
     var nameData:Array<String>=[]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +51,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     // 顯示表格標題
     func tableView(_ tableView: UITableView, titleForHeaderInSection section:
         Int) -> String?{
-        return "頭";
+        return "專案";
     }
     // 顯示表格結尾
     func tableView(_ tableView: UITableView, titleForFooterInSection section:
